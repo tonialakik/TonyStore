@@ -1,0 +1,29 @@
+version: 0.0
+os: linux
+files:
+ - source: /
+   destination: /var/www/magento
+permissions:
+  - object: /var/www/magento
+    pattern: "**"
+    owner: www-data
+    group: www-data
+    mode: 775
+    type:
+      - directory
+  - object: /var/www/magento
+    pattern: "**"
+    owner: www-data
+    group: www-data
+    mode: 664
+    type:
+      - file
+hooks:
+  BeforeInstall:
+    - location: Scripts/BeforeInstall.sh
+      timeout: 180
+      runas: root
+  AfterInstall:
+    - location: Scripts/AfterInstall.sh
+      timeout: 180
+      runas: root
