@@ -2,16 +2,16 @@ version: 0.0
 os: linux
 files:
  - source: /
-   destination: /var/www/magento
+   destination: /var/www/html/magento-test
 permissions:
-  - object: /var/www/magento
+  - object: /var/www/html/magento-test
     pattern: "**"
     owner: www-data
     group: www-data
     mode: 775
     type:
       - directory
-  - object: /var/www/magento
+  - object: /var/www/html/magento-test
     pattern: "**"
     owner: www-data
     group: www-data
