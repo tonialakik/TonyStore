@@ -22,8 +22,8 @@ hooks:
   BeforeInstall:
     - location: Scripts/BeforeInstall.sh
       timeout: 180
-      runas: root
+      runas: ubuntu
   AfterInstall:
     - location: Scripts/AfterInstall.sh
       timeout: 400
-      runas: root
+      runas: ubuntu
