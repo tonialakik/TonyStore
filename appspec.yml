@@ -18,15 +18,6 @@ permissions:
     mode: 664
     type:
       - file
-
-  - object: /var/www/html/magento-test/Scripts
-    pattern: "**"
-    owner: root
-    group: root
-    mode: 777
-    type:
-      - directory
-
 hooks:
   BeforeInstall:
     - location: Scripts/BeforeInstall.sh
